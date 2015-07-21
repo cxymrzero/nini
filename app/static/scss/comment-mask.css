@@ -1,0 +1,92 @@
+/*colors*/
+.comment-mask {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .comment-mask .comment-window {
+    z-index: 20;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center; }
+    .comment-mask .comment-window header {
+      position: relative;
+      text-align: left; }
+      .comment-mask .comment-window header span {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #999; }
+        .comment-mask .comment-window header span.comment-submit {
+          position: absolute;
+          color: #a5d0fe;
+          top: 0;
+          right: 0; }
+    .comment-mask .comment-window textarea {
+      margin-top: 10px;
+      width: 100%;
+      height: 180px;
+      resize: none;
+      font-family: "Microsoft Yahei";
+      outline: none;
+      font-size: 16px;
+      border: 1px solid #e3e4e6;
+      border-radius: 5px;
+      padding: 10px; }
+  .comment-mask .score-window {
+    display: none;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 30px;
+    text-align: center; }
+    .comment-mask .score-window header {
+      font-size: 22px;
+      height: 40px;
+      line-height: 40px; }
+    .comment-mask .score-window p {
+      font-size: 16px;
+      color: #fc539b;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 20px; }
+    .comment-mask .score-window div.score-panel {
+      width: 90%;
+      margin: 0 auto;
+      height: 50px;
+      overflow-y: auto;
+      border-bottom: 1px solid #dbdbdb;
+      border-top: 1px solid #dbdbdb; }
+      .comment-mask .score-window div.score-panel p, .comment-mask .score-window div.score-panel li {
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px; }
+        .comment-mask .score-window div.score-panel p.active, .comment-mask .score-window div.score-panel li.active {
+          color: #fc539b; }
+    .comment-mask .score-window footer {
+      font-size: 0;
+      margin-top: 30px; }
+      .comment-mask .score-window footer span {
+        display: inline-block;
+        width: 50%;
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px; }
+        .comment-mask .score-window footer span:first-child {
+          color: #999; }
+        .comment-mask .score-window footer span:last-child {
+          color: #007aff; }
+
+/*# sourceMappingURL=comment-mask.css.map */

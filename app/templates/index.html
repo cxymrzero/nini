@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" href="../static/css/base.css"/>
+<link rel="stylesheet" href="../static/css/index.css"/>
+{% endblock %}
+{% block body %}
+ <header class="headBar">
+     <div class="head-wrap">
+         <a href="/" class="img"><img src="../static/images/logo.png" alt=""/></a>
+         <a href="/" class="active">首页</a>
+         <a href="/pop">热评榜</a>
+         <a href="/high">高分榜</a>
+         <a href="/low">低分榜</a>
+     </div>
+ </header>
+
+<header class="searchBar">
+    <div class="search-wrap">
+        <form action="/teacher/search" method="get" id="search-form">
+            <input type="text" name="search-content" id="search-content" placeholder="搜索老师或院系"/>
+            <button id="search"><span class="null">" "</span><span class="icon-search"></span></button>
+        </form>
+    </div>
+</header>
+<div class="main">
+    <div class="hot">
+        <p class="hot-teacher">热门老师</p>
+        <ul class="hot-list">
+            {% for teacher in teachers %}
+            <li class="hot-item"><a href="/teacher/{{ teacher.id }}">{{ teacher.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!--<div class="interview">-->
+        <!--<div class="item">-->
+            <!--<p class="title">在这里，保持高分不容易,但他做到了</p>-->
+            <!--<img src="../static/images/0.jpg" alt=""/>-->
+            <!--<p class="detail">匿匿高分教师—微积分王德荣老师访谈实录</p>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="commit">
+        <span>在这里你可以畅所欲言</span>
+        <span>我们绝对会保护您的隐私</span>
+    </div>
+
+    <div id="tip">
+        <section>
+            <header></header>
+            <footer>确定</footer>
+        </section>
+    </div>
+</div>
+<script src="/static/js/weixinapi.js?v=3.6"></script>
+<script src="/static/js/zepto.min.js"></script>
+<script src="/static/js/index.js"></script>
+{% endblock %}
+
+{% block wechat %}
+{{ wechat }}出品
+{% endblock %}

@@ -1,0 +1,98 @@
+@import "../scss/topbar";
+@import "../scss/variables";
+@import "../scss/tip";
+
+
+.result-wrap{
+  padding-left:10px;
+  padding-right: 10px;
+  .result-item{
+    padding-right: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    position: relative;
+    border-bottom: $border-bottom;
+    .order{
+      //z-index: 10;
+      position: absolute;
+      top:10px;
+      left:0;
+      //border-radius: 30px;
+      display: inline-block;
+      width:30px;
+      height:30px;
+      text-align: center;
+      line-height: 30px;
+      font-size: 30px;
+      color:$blue1;
+      //border:1px solid $gray2;
+    }
+    header{
+      position: relative;
+      span{
+        font-size: 20px;
+        height:40px;
+        line-height: 40px;
+        font-weight: 600;
+        &.score{
+          position: absolute;
+          top:0;
+          right:0;
+        }
+      }
+    }
+    .info{
+      color:$black;
+      font-size:14px;
+      position: relative;
+      p{
+        line-height: 16px;
+        height:16px;
+      }
+      .more{
+        position: absolute;
+        font-size: 16px;
+        bottom:0;
+        right: 0;
+        color:$blue1;
+      }
+    }
+
+  }
+}
+.no-result{
+  margin-top:60px;
+  text-align: center;
+  p{
+    text-align: center;
+    font-size: 18px;
+    padding:5px;
+    color:#999;
+  }
+  img{
+    width:300px;
+  }
+}
+.shengming{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  p{
+    font-size: 12px;
+    text-align: center;
+    color:$red;
+  }
+}
+footer.teacher-add{
+  @extend  .bar;
+  bottom: 0;
+  border-bottom: none;
+  border-top: $border-bottom;
+  text-align: center;
+  span{
+    display: inline-block;
+    height:44px;
+    line-height: 44px;
+    font-size: 20px;
+    color:$blue1;
+  }
+}

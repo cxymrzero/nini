@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}搜索结果{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/base.css"/>
+<link rel="stylesheet" href="/static/css/result.css"/>
+<style>
+    .result-wrap .result-item{
+        padding-left: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<header class="headBar">
+    <div class="head-wrap">
+        <a href="/" class="img"><img src="../static/images/logo.png" alt="妮妮"/></a>
+        <a href="/">首页</a>
+        <a href="/pop">热评榜</a>
+        <a href="/high">高分榜</a>
+        <a href="/low">低分榜</a>
+    </div>
+</header>
+
+<header class="searchBar">
+    <div class="search-wrap">
+        <form action="/teacher/search" method="get" id="search-form">
+            <input type="text" name="search-content" id="search-content" placeholder="搜索老师或院系"/>
+            <button id="search"><span class="null">" "</span><span class="icon-search"></span></button>
+        </form>
+    </div>
+</header>
+{% if teachers %}
+<div class="result-wrap">
+    {% for teacher in teachers %}
+    <a href="/teacher/{{ teacher.id }}">
+    <div class="result-item">
+        <header>
+            <span class="name">{{ teacher.name }}</span>
+            <span class="score">{% if teacher.cmt_num %}{{ teacher.avg|round(1) }}分{% else %}暂无评分{% endif %}</span>
+        </header>
+        <section class="info">
+            <p class="school">{{ teacher.school }}</p>
+            <p class="yuan">{{ teacher.dept_name }}</p>
+            <a href="/teacher/{{ teacher.id }}" class="more">查看详情</a>
+        </section>
+    </div>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<div class="no-result">
+    <img src="../static/images/404.png" alt="404"/>
+    <p>您搜索的老师不存在</p>
+    <p>赶快添加吧！</p>
+</div>
+{% endif %}
+
+<div id="tip">
+    <section>
+        <header></header>
+        <footer>确定</footer>
+    </section>
+</div>
+<a href="/teacher/add">
+    <footer class="teacher-add"><span>添加老师</span></footer>
+</a>
+<script src="/static/js/weixinapi.js"></script>
+<script src="/static/js/zepto.min.js"></script>
+<script src="/static/js/index.js"></script>
+{% endblock %}

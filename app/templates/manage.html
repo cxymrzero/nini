@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>匿匿后台管理</title>
+	<link rel="stylesheet" href="../static/css/manage.css">
+</head>
+<body>
+	<div class="main">
+		<header class="main-header">匿匿后台管理界面</header>
+		<div class="input-wrap">
+			<input type="text" id="teacher-url">
+			<!-- <a  href="" id="teacher-commit">确认老师</a> --> 
+			<a class="submit" id="submit-teacher" href="javascript:void()">删除</a>
+			<p class="tip">输入要删除老师主页的链接</p>
+			<p class="error" id="teacher-error"></p>
+		</div>
+		<div class="input-wrap">
+			<input type="text" id="comment-url">
+			<!-- <a  href="" id="comment-commit">确认评论</a> --> 
+			<a class="submit" id="submit-comment" href="javascript:void()">删除</a>
+			<p class="tip">输入要删除评论详情页的链接</p>
+			<p class="error" id="comment-error"></p>
+		</div>
+	</div>
+	<div class="copyright">
+    	<p><a href="/copyright">冰岩作坊 版权所有</a></p>
+    	<p>Copyright 2015 Bingyan Studio.All rights reserved!</p>
+    </div>
+</body>
+<script src="../static/js/zepto.min.js"></script>
+<script src="../static/js/admin.js"></script>
+</html>

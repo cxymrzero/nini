@@ -1,0 +1,70 @@
+@import "../scss/topbar";
+@import "../scss/variables";
+@import "../scss/tip";
+
+$height: 30px;
+$line-height: 30px;
+body{
+  padding-bottom: 0;
+}
+
+.hot{
+  text-align: center;
+  .hot-teacher{
+    color:$black;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    height:$height;
+    line-height: $height;
+  }
+  .hot-item{
+    color:$blue1;
+    height:$height;
+    line-height: $height;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+//.interview{
+//  padding:50px 10px;
+//  .item{
+//    text-align: center;
+//    p{
+//      height:30px;
+//      line-height: 30px;
+//    }
+//    .title{
+//      font-size:15px;
+//      color:$red;
+//    }
+//    img{
+//      width:80%;
+//    }
+//    .detail{
+//      font-size: 12px;
+//      color: #aaaaaa;
+//    }
+//  }
+//}
+
+.main{
+  position: relative;
+  height: 100%;
+}
+.commit{
+  //position: fixed;
+  width:100%;
+  margin-top: 30px;
+  bottom: 50px;
+  left:0;
+  right:0;
+  span{
+    font-size: 14px;
+    color:$red;
+    display: block;
+    text-align: center;
+    line-height:$height;
+    height:$height;
+  }
+}

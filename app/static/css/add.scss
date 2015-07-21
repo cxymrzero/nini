@@ -1,0 +1,113 @@
+@import "../scss/topbar";
+@import "../scss/variables";
+@import "../scss/tip";
+
+.add-window{
+  padding:0 20px;
+  background-color: #fff;
+  header{
+    font-size: 20px;
+    height:40px;
+    line-height: 40px;
+    text-align:center;
+  }
+  .add-content{
+    border-top: $border-bottom;
+    padding-top: 40px;
+    .major-panel{
+      width:100%;
+      height:45px;
+      text-align: center;
+      p{
+        height:45px;
+        line-height: 45px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+    input{
+      width:100%;
+      height:45px;
+      margin-top: 30px;
+      border: none;
+      border-bottom:$border-bottom;
+      outline:none;
+      text-align: center;
+      font-family: "Microsoft Yahei";
+      font-size: 18px;
+      padding-bottom:0;
+      &::-webkit-input-placeholder {
+        text-align: center;
+        color:#999;
+      }
+    }
+  }
+}
+
+.mask{
+  position:fixed;
+  //display: none;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  width:100%;
+  height:100%;
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 20;
+  .major-window{
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow-y: auto;
+    background-color: #ffffff;
+    text-align: center;
+    -webkit-overflow-scrolling:touch;
+    header{
+      margin-top: 20px;
+      height:40px;
+      line-height:40px;
+      font-size: 20px;
+      background-color: $gray1;
+      color:$red;
+    }
+    section{
+      height:80%;
+      overflow-y: auto;
+      padding: 0 40px;
+      li{
+        height:40px;
+        line-height: 40px;
+        font-size: 18px;
+        border-bottom: $border-bottom;
+        &:last-child{
+          border-bottom: none;
+        }
+        &.active{
+          color:$red;
+        }
+      }
+    }
+  }
+}
+
+.add-submit{
+  @extend  .bar;
+  bottom: 0;
+  border-bottom: none;
+  border-top: $border-bottom;
+  text-align: center;
+
+  span{
+    display: inline-block;
+    height:44px;
+    line-height: 44px;
+    font-size: 20px;
+    color:$blue1;
+    cursor: pointer;
+  }
+  &:hover span{
+    color: $blue2;
+  }
+}

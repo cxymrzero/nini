@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0  minimal-ui">
+    <!--视图窗口移动端特有的标签 上面的代码设置依次表示为设置宽度为设备宽度，禁止缩放 网页加载时隐藏地址栏与导航栏（ios7新增）-->
+    <meta http-equiv="cache-control" content="no-cache" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>匿名评师系统</title>
+    <link rel="stylesheet" href="../static/css/base.css"/>
+    <link rel="stylesheet" href="../static/css/add.css"/>
+</head>
+<body>
+
+<div class="add-window">
+    <header>
+        华中科技大学
+    </header>
+    <div class="add-content">
+        <div class="major-panel" id="major-panel">
+            <p class="major" id="major">-- 请点击选择院系 --</p>
+        </div>
+        <input type="text" placeholder="输入老师姓名" class="teacher-name" id="teacher-name"/>
+    </div>
+
+</div>
+<div class="mask" id="mask">
+    <div class="major-window" id="major-window">
+        <header>选择院系</header>
+        <section>
+            <ul id="list-item">
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+                <li>软件学院</li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+
+<footer class="add-submit" id="add-submit">
+    <span>确认添加</span>
+</footer>
+<div id="tip">
+    <section>
+        <header>添加成功</header>
+        <footer>确定</footer>
+    </section>
+</div>
+<script src="../static/js/zepto.min.js"></script>
+<script src="../static/js/add.js"></script>
+</body>
+</html>

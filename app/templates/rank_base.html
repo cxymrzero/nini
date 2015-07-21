@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/base.css"/>
+<link rel="stylesheet" href="/static/css/result.css"/>
+{% endblock %}
+
+{% block body %}
+<header class="headBar">
+    <div class="head-wrap">
+        <a href="/" class="img"><img src="../static/images/logo.png" alt=""/></a>
+        <a href="/">首页</a>
+        <a {% if active =="pop" %}class="active" {% endif %}href="/pop">热评榜</a>
+        <a {% if active =="high" %}class="active" {% endif %}href="/high">高分榜</a>
+        <a {% if active =="low" %}class="active" {% endif %}href="/low">低分榜</a>
+    </div>
+</header>
+<header class="searchBar">
+    <div class="search-wrap">
+        <form action="/teacher/search" method="get" id="search-form">
+            <input type="text" name="search-content" id="search-content" placeholder="搜索老师或院系"/>
+            <button id="search"><span class="null">" "</span><span class="icon-search"></span></button>
+        </form>
+    </div>
+</header>
+{% if teachers %}
+<div class="result-wrap">
+    {% for teacher in teachers %}
+    <a href="/teacher/{{ teacher.id }}">
+        <div class="result-item">
+            <span class="order">{{ loop.index }}</span>
+            <header>
+                <span class="name">{{ teacher.name }}</span>
+                <span class="score">{% if teacher.cmt_num %}{{ teacher.avg|round(1) }}分{% else %}暂无评分{% endif %}</span>
+            </header>
+            <section class="info">
+                <p class="school">{{ teacher.school }}</p>
+                <p class="yuan">{{ teacher.dept_name }}</p>
+                <a href="/teacher/{{ teacher.id }}" class="more">查看详情</a>
+            </section>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+<div class="shengming">
+    <p>该排名由全体师生自发评论、打分产生</p>
+</div>
+{% else %}
+<div class="no-result">
+    <img src="../static/images/404.png" alt="404"/>
+    <p>您搜索的老师不存在</p>
+    <p>赶快添加吧！</p>
+</div>
+{% endif %}
+
+<div id="tip">
+    <section>
+        <header></header>
+        <footer>确定</footer>
+    </section>
+</div>
+<a href="/teacher/add">
+    <footer class="teacher-add"><span>添加老师</span></footer>
+</a>
+<script src="/static/js/weixinapi.js"></script>
+<script src="/static/js/zepto.min.js"></script>
+<script src="/static/js/index.js"></script>
+{% endblock %}

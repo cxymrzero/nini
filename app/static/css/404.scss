@@ -1,0 +1,16 @@
+@import "../scss/topbar";
+@import "../scss/tip";
+
+.no-result{
+  margin-top: 60px;
+  text-align: center;
+  p{
+    font-size: 18px;
+    text-align: center;
+    padding:5px;
+    color:#999;
+  }
+  img{
+    width:300px;
+  }
+}

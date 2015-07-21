@@ -1,0 +1,19 @@
+body{
+    background-color: #f8d6cc;
+    padding-top: 80px;
+}
+
+.attention{
+    text-align: center;
+}
+
+.attention img{
+    width:280px;
+}
+
+.copyright{
+    position:absolute;
+    bottom:5px;
+    left:0px;
+    right:0px;
+}

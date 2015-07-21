@@ -1,0 +1,64 @@
+.main{
+	width:800px;
+	margin:0 auto;
+	font-family: "Microsoft Yahei";
+}
+.main-header{
+	font-size: 25px;
+	text-align: center;
+}
+.input-wrap{
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+#teacher-url, #comment-url {
+	width:400px;
+	padding:3px;
+	height:30px;
+	font-size: 16px;
+	font-family: "Microsoft Yahei";
+	border-radius: 3px;
+	border:1px solid #999;
+	outline:none;
+}
+.input-wrap a{
+	margin-left: 40px;
+	display: inline-block;
+	height:36px;
+	width:150px;
+	line-height:36px;
+	font-size: 16px;
+	border-radius: 3px;
+	text-align: center;
+	text-decoration: none;
+	background-color: rgba(165,208,254,0.5);
+	/*color:#fff;*/
+}
+.input-wrap a:hover,.input-wrap a:active{
+	background-color: rgba(165,208,254,1);
+}
+.input-wrap .tip{
+	font-size:15px;
+	color:#999;
+}
+/******底部版权声明*******/
+.copyright{
+    padding-top:10px;
+    padding-bottom:10px;
+    position: absolute;
+    bottom:20px;
+    left:0px;
+    right:0px;
+}
+.copyright p{
+	font-family: "Microsoft Yahei";
+    height:18px;
+    text-align: center;
+    font-size: 15px;
+    color:rgb(252,83,155);
+
+}
+
+.error {
+	color: #FF0000;
+}

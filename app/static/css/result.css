@@ -1,0 +1,207 @@
+/*colors*/
+.bar, .headBar, .searchBar, footer.teacher-add {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 45px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.headBar {
+  position: static;
+  height: 40px;
+  border-bottom: none; }
+  .headBar .head-wrap {
+    margin: 0 auto;
+    height: 40px;
+    padding-left: 95px;
+    position: relative;
+    font-size: 0; }
+    .headBar .head-wrap a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 6px;
+      padding-right: 6px;
+      font-size: 15px;
+      font-family: "Microsoft Yahei";
+      text-decoration: none; }
+      .headBar .head-wrap a img {
+        height: 40px; }
+      .headBar .head-wrap a:hover {
+        background-color: #a5d0fe; }
+      .headBar .head-wrap a:active {
+        background-color: #a5d0fe; }
+      .headBar .head-wrap a.img {
+        position: absolute;
+        top: 0;
+        left: 0; }
+
+.searchBar {
+  position: static;
+  padding-top: 0; }
+  .searchBar .search-wrap {
+    margin: 0 auto;
+    width: 95%;
+    font-size: 0; }
+    .searchBar .search-wrap input {
+      width: 78%;
+      margin-right: 2%;
+      height: 34px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-color: #e3e4e6;
+      outline: none;
+      border: none;
+      border-right: 1px solid #dbdbdb;
+      padding: 5px;
+      font-family: "Microsoft Yahei";
+      font-size: 16px; }
+      .searchBar .search-wrap input::-webkit-input-placeholder {
+        color: #aaa;
+        font-size: 16px; }
+    .searchBar .search-wrap button {
+      width: 20%;
+      height: 34px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #e3e4e6;
+      border: none;
+      outline: none;
+      font-family: "Microsoft Yahei";
+      font-size: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer; }
+      .searchBar .search-wrap button:hover {
+        color: #fff;
+        background-color: #a5d0fe; }
+      .searchBar .search-wrap button span.null {
+        width: 0;
+        position: relative;
+        top: -40px; }
+      .searchBar .search-wrap button span.icon-search {
+        position: absolute;
+        display: inline-block;
+        width: 25px;
+        font-size: 25px;
+        right: 50%;
+        margin-right: -12px;
+        color: #007aff; }
+
+/*colors*/
+/*colors*/
+#tip {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40; }
+
+#tip section {
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+  top: 150px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0 auto; }
+
+#tip section header {
+  padding: 30px 10px;
+  font-size: 22px;
+  color: #999; }
+
+#tip section footer {
+  border-top: 1px solid #dbdbdb;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #007aff;
+  cursor: pointer; }
+
+/*# sourceMappingURL=tip.css.map */
+.result-wrap {
+  padding-left: 10px;
+  padding-right: 10px; }
+  .result-wrap .result-item {
+    padding-right: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    position: relative;
+    border-bottom: 1px solid #dbdbdb; }
+    .result-wrap .result-item .order {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      font-size: 30px;
+      color: #007aff; }
+    .result-wrap .result-item header {
+      position: relative; }
+      .result-wrap .result-item header span {
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 600; }
+        .result-wrap .result-item header span.score {
+          position: absolute;
+          top: 0;
+          right: 0; }
+    .result-wrap .result-item .info {
+      color: #373737;
+      font-size: 14px;
+      position: relative; }
+      .result-wrap .result-item .info p {
+        line-height: 16px;
+        height: 16px; }
+      .result-wrap .result-item .info .more {
+        position: absolute;
+        font-size: 16px;
+        bottom: 0;
+        right: 0;
+        color: #007aff; }
+
+.no-result {
+  margin-top: 60px;
+  text-align: center; }
+  .no-result p {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    color: #999; }
+  .no-result img {
+    width: 300px; }
+
+.shengming {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  .shengming p {
+    font-size: 12px;
+    text-align: center;
+    color: #fc539b; }
+
+footer.teacher-add {
+  bottom: 0;
+  border-bottom: none;
+  border-top: 1px solid #dbdbdb;
+  text-align: center; }
+  footer.teacher-add span {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    font-size: 20px;
+    color: #007aff; }
+
+/*# sourceMappingURL=result.css.map */

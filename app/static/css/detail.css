@@ -1,0 +1,299 @@
+/*colors*/
+.bar, .headBar, .searchBar, .comment-make {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 45px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.headBar {
+  position: static;
+  height: 40px;
+  border-bottom: none; }
+  .headBar .head-wrap {
+    margin: 0 auto;
+    height: 40px;
+    padding-left: 95px;
+    position: relative;
+    font-size: 0; }
+    .headBar .head-wrap a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 6px;
+      padding-right: 6px;
+      font-size: 15px;
+      font-family: "Microsoft Yahei";
+      text-decoration: none; }
+      .headBar .head-wrap a img {
+        height: 40px; }
+      .headBar .head-wrap a:hover {
+        background-color: #a5d0fe; }
+      .headBar .head-wrap a:active {
+        background-color: #a5d0fe; }
+      .headBar .head-wrap a.img {
+        position: absolute;
+        top: 0;
+        left: 0; }
+
+.searchBar {
+  position: static;
+  padding-top: 0; }
+  .searchBar .search-wrap {
+    margin: 0 auto;
+    width: 95%;
+    font-size: 0; }
+    .searchBar .search-wrap input {
+      width: 78%;
+      margin-right: 2%;
+      height: 34px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-color: #e3e4e6;
+      outline: none;
+      border: none;
+      border-right: 1px solid #dbdbdb;
+      padding: 5px;
+      font-family: "Microsoft Yahei";
+      font-size: 16px; }
+      .searchBar .search-wrap input::-webkit-input-placeholder {
+        color: #aaa;
+        font-size: 16px; }
+    .searchBar .search-wrap button {
+      width: 20%;
+      height: 34px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #e3e4e6;
+      border: none;
+      outline: none;
+      font-family: "Microsoft Yahei";
+      font-size: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer; }
+      .searchBar .search-wrap button:hover {
+        color: #fff;
+        background-color: #a5d0fe; }
+      .searchBar .search-wrap button span.null {
+        width: 0;
+        position: relative;
+        top: -40px; }
+      .searchBar .search-wrap button span.icon-search {
+        position: absolute;
+        display: inline-block;
+        width: 25px;
+        font-size: 25px;
+        right: 50%;
+        margin-right: -12px;
+        color: #007aff; }
+
+/*colors*/
+/*colors*/
+#tip {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40; }
+
+#tip section {
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+  top: 150px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0 auto; }
+
+#tip section header {
+  padding: 30px 10px;
+  font-size: 22px;
+  color: #999; }
+
+#tip section footer {
+  border-top: 1px solid #dbdbdb;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #007aff;
+  cursor: pointer; }
+
+/*# sourceMappingURL=tip.css.map */
+/*colors*/
+.comment-make {
+  bottom: 0;
+  border-bottom: none;
+  border-top: 1px solid #dbdbdb;
+  text-align: center; }
+  .comment-make span {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    font-size: 20px;
+    color: #007aff;
+    cursor: pointer; }
+  .comment-make:hover {
+    color: #a5d0fe; }
+
+.comment-mask {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; }
+  .comment-mask .comment-window {
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center; }
+    .comment-mask .comment-window header {
+      position: relative;
+      text-align: left; }
+      .comment-mask .comment-window header span {
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #999;
+        padding-left: 20px; }
+        .comment-mask .comment-window header span.comment-submit {
+          position: absolute;
+          color: #007aff;
+          right: 20px;
+          cursor: pointer; }
+    .comment-mask .comment-window textarea {
+      margin-top: 10px;
+      width: 100%;
+      height: 80%;
+      resize: none;
+      font-family: "Microsoft Yahei";
+      outline: none;
+      font-size: 16px;
+      border: 1px solid #e3e4e6;
+      border-radius: 5px;
+      padding: 10px; }
+  .comment-mask .score-window {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+    z-index: 20;
+    padding: 10px; }
+    .comment-mask .score-window header {
+      margin-top: 20px;
+      font-size: 22px;
+      height: 40px;
+      line-height: 40px; }
+    .comment-mask .score-window div.score-panel {
+      margin-top: 5px; }
+      .comment-mask .score-window div.score-panel div.li-item li {
+        margin: 15px;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 40px;
+        border: 1px solid #e3e4e6;
+        font-size: 20px;
+        cursor: pointer; }
+        .comment-mask .score-window div.score-panel div.li-item li.none {
+          font-size: 16px; }
+        .comment-mask .score-window div.score-panel div.li-item li.active {
+          background-color: #e3e4e6; }
+
+.teacher-wrap {
+  padding-left: 10px;
+  padding-right: 10px; }
+  .teacher-wrap .teacher {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px; }
+    .teacher-wrap .teacher header {
+      position: relative; }
+      .teacher-wrap .teacher header span {
+        font-size: 25px;
+        height: 40px;
+        line-height: 40px; }
+        .teacher-wrap .teacher header span.score {
+          position: absolute;
+          top: 0;
+          right: 0; }
+    .teacher-wrap .teacher .info {
+      color: #373737;
+      font-size: 14px;
+      position: relative; }
+      .teacher-wrap .teacher .info p {
+        line-height: 22px;
+        height: 22px; }
+  .teacher-wrap .comment-label {
+    font-size: 0;
+    border-bottom: 1px solid #dbdbdb; }
+    .teacher-wrap .comment-label span {
+      display: inline-block;
+      font-size: 16px;
+      width: 50%;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      color: #373737;
+      cursor: pointer; }
+      .teacher-wrap .comment-label span.active {
+        color: #007aff; }
+  .teacher-wrap .comment-new-wrap {
+    display: none; }
+  .teacher-wrap .comment-hot-wrap, .teacher-wrap .comment-new-wrap {
+    padding: 0 10px; }
+    .teacher-wrap .comment-hot-wrap .comment-item, .teacher-wrap .comment-new-wrap .comment-item {
+      padding-right: 40px;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      position: relative;
+      border-bottom: 1px solid #dbdbdb; }
+      .teacher-wrap .comment-hot-wrap .comment-item p, .teacher-wrap .comment-new-wrap .comment-item p {
+        height: 56px;
+        overflow: hidden;
+        font-size: 13px;
+        color: #373737; }
+      .teacher-wrap .comment-hot-wrap .comment-item i, .teacher-wrap .comment-hot-wrap .comment-item span, .teacher-wrap .comment-new-wrap .comment-item i, .teacher-wrap .comment-new-wrap .comment-item span {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        line-height: 25px; }
+      .teacher-wrap .comment-hot-wrap .comment-item span.num, .teacher-wrap .comment-new-wrap .comment-item span.num {
+        font-size: 22px;
+        top: 25px;
+        color: #007aff;
+        text-align: center; }
+      .teacher-wrap .comment-hot-wrap .comment-item i, .teacher-wrap .comment-new-wrap .comment-item i {
+        font-size: 25px;
+        color: #a5d0fe;
+        cursor: pointer; }
+        .teacher-wrap .comment-hot-wrap .comment-item i.ding, .teacher-wrap .comment-new-wrap .comment-item i.ding {
+          top: 0; }
+        .teacher-wrap .comment-hot-wrap .comment-item i.ding.active, .teacher-wrap .comment-new-wrap .comment-item i.ding.active {
+          color: #fc539b; }
+        .teacher-wrap .comment-hot-wrap .comment-item i.cai, .teacher-wrap .comment-new-wrap .comment-item i.cai {
+          top: 50px; }
+        .teacher-wrap .comment-hot-wrap .comment-item i.cai.active, .teacher-wrap .comment-new-wrap .comment-item i.cai.active {
+          color: #373737; }
+
+/*# sourceMappingURL=detail.css.map */

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="../static/css/base.css"/>
+<link rel="stylesheet" href="../static/css/404.css"/>
+{% endblock %}
+
+{% block body %}
+<header class="searchBar">
+    <div class="search-wrap">
+        <input type="text" placeholder="东方不败"/>
+        <button><span class="null">" "</span><span class="icon-search"></span></button>
+    </div>
+</header>
+<div class="no-result">
+    <img src="../static/images/404.png" alt="404"/>
+    <p>您搜索的老师不存在</p>
+    <p>赶快添加吧！</p>
+</div>
+<script src="../static/js/zepto.min.js"></script>
+<script src="../static/js/index.js"></script>
+{% endblock %}

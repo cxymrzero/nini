@@ -1,0 +1,56 @@
+@import "../scss/topbar";
+@import "../scss/variables";
+@import "../scss/tip";
+@import "../scss/comment-mask";
+
+body{
+  padding-left:10px;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+.comment-item{
+  padding-right: 40px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  position: relative;
+  border-bottom: $border-bottom;
+  border-top: $border-bottom;
+  text-align: justify;
+  p{
+    min-height:50px;
+    text-align: justify;
+    font-size: 14px;
+    color:$black;
+  }
+  i,span {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
+  span.num{
+    font-size: 22px;
+    top:30px;
+    color: $blue1;
+    text-align: center;
+  }
+  i{
+    font-size: 25px;
+    color:$blue2;
+    cursor:pointer;
+    &.ding{
+      top:5px;
+    }
+    &.ding.active{
+      color:$red;
+    }
+    &.cai{
+      top:55px;
+    }
+    &.cai.active{
+      color:$black;
+    }
+  }
+}

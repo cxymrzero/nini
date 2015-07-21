@@ -1,0 +1,221 @@
+/*colors*/
+.bar, .headBar, .searchBar, .add-submit {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 45px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.headBar {
+  position: static;
+  height: 40px;
+  border-bottom: none; }
+  .headBar .head-wrap {
+    margin: 0 auto;
+    height: 40px;
+    padding-left: 95px;
+    position: relative;
+    font-size: 0; }
+    .headBar .head-wrap a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 6px;
+      padding-right: 6px;
+      font-size: 15px;
+      font-family: "Microsoft Yahei";
+      text-decoration: none; }
+      .headBar .head-wrap a img {
+        height: 40px; }
+      .headBar .head-wrap a:hover {
+        background-color: #a5d0fe; }
+      .headBar .head-wrap a:active {
+        background-color: #a5d0fe; }
+      .headBar .head-wrap a.img {
+        position: absolute;
+        top: 0;
+        left: 0; }
+
+.searchBar {
+  position: static;
+  padding-top: 0; }
+  .searchBar .search-wrap {
+    margin: 0 auto;
+    width: 95%;
+    font-size: 0; }
+    .searchBar .search-wrap input {
+      width: 78%;
+      margin-right: 2%;
+      height: 34px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-color: #e3e4e6;
+      outline: none;
+      border: none;
+      border-right: 1px solid #dbdbdb;
+      padding: 5px;
+      font-family: "Microsoft Yahei";
+      font-size: 16px; }
+      .searchBar .search-wrap input::-webkit-input-placeholder {
+        color: #aaa;
+        font-size: 16px; }
+    .searchBar .search-wrap button {
+      width: 20%;
+      height: 34px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #e3e4e6;
+      border: none;
+      outline: none;
+      font-family: "Microsoft Yahei";
+      font-size: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer; }
+      .searchBar .search-wrap button:hover {
+        color: #fff;
+        background-color: #a5d0fe; }
+      .searchBar .search-wrap button span.null {
+        width: 0;
+        position: relative;
+        top: -40px; }
+      .searchBar .search-wrap button span.icon-search {
+        position: absolute;
+        display: inline-block;
+        width: 25px;
+        font-size: 25px;
+        right: 50%;
+        margin-right: -12px;
+        color: #007aff; }
+
+/*colors*/
+/*colors*/
+#tip {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40; }
+
+#tip section {
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+  top: 150px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0 auto; }
+
+#tip section header {
+  padding: 30px 10px;
+  font-size: 22px;
+  color: #999; }
+
+#tip section footer {
+  border-top: 1px solid #dbdbdb;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #007aff;
+  cursor: pointer; }
+
+/*# sourceMappingURL=tip.css.map */
+.add-window {
+  padding: 0 20px;
+  background-color: #fff; }
+  .add-window header {
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center; }
+  .add-window .add-content {
+    border-top: 1px solid #dbdbdb;
+    padding-top: 40px; }
+    .add-window .add-content .major-panel {
+      width: 100%;
+      height: 45px;
+      text-align: center; }
+      .add-window .add-content .major-panel p {
+        height: 45px;
+        line-height: 45px;
+        font-size: 18px;
+        cursor: pointer; }
+    .add-window .add-content input {
+      width: 100%;
+      height: 45px;
+      margin-top: 30px;
+      border: none;
+      border-bottom: 1px solid #dbdbdb;
+      outline: none;
+      text-align: center;
+      font-family: "Microsoft Yahei";
+      font-size: 18px;
+      padding-bottom: 0; }
+      .add-window .add-content input::-webkit-input-placeholder {
+        text-align: center;
+        color: #999; }
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 20; }
+  .mask .major-window {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #ffffff;
+    text-align: center;
+    -webkit-overflow-scrolling: touch; }
+    .mask .major-window header {
+      margin-top: 20px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 20px;
+      background-color: #f8f8f8;
+      color: #fc539b; }
+    .mask .major-window section {
+      height: 80%;
+      overflow-y: auto;
+      padding: 0 40px; }
+      .mask .major-window section li {
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        border-bottom: 1px solid #dbdbdb; }
+        .mask .major-window section li:last-child {
+          border-bottom: none; }
+        .mask .major-window section li.active {
+          color: #fc539b; }
+
+.add-submit {
+  bottom: 0;
+  border-bottom: none;
+  border-top: 1px solid #dbdbdb;
+  text-align: center; }
+  .add-submit span {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    font-size: 20px;
+    color: #007aff;
+    cursor: pointer; }
+  .add-submit:hover span {
+    color: #a5d0fe; }
+
+/*# sourceMappingURL=add.css.map */

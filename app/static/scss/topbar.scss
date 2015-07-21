@@ -1,0 +1,121 @@
+@import "variables";
+.bar{
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 45px;
+  background-color: $gray1;
+  border-bottom: $border-bottom;
+  -webkit-backface-visibility: hidden; // Make sure the bar is visible when a modal animates in.
+  backface-visibility: hidden;
+}
+.headBar{
+  @extend .bar;
+  position: static;
+  height:40px;
+ // box-shadow:2px 2px 2px $gray2;
+  border-bottom: none;
+  .head-wrap{
+    margin:0 auto;
+    //width: 95%;
+    height:40px;
+    padding-left:95px;
+    position: relative;
+    font-size: 0;
+
+    a{
+      display: inline-block;
+      height:40px;
+      line-height: 40px;
+      padding-left:6px;
+      padding-right: 6px;
+      font-size:15px;
+      font-family: "Microsoft Yahei";
+      text-decoration: none;
+      img{
+          height:40px;
+      }
+      &:hover{
+        background-color: $blue2;
+      }
+      &:active{
+        background-color: $blue2;
+      }
+      &.active{
+       // background-color: $blue2;
+      }
+      &.img{
+        position: absolute;
+        top:0;
+        left:0;
+      }
+    }
+  }
+}
+.searchBar {
+  @extend .bar;
+  //position: absolute;
+  //top:0;
+  position: static;
+  //padding:6px 0;
+  padding-top:0;
+  .search-wrap {
+    margin:0 auto;
+    width: 95%;
+    font-size: 0;
+    input {
+      width:78%;
+      margin-right: 2%;
+      height: 34px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-color: rgb(227,228,230);
+      outline: none;
+      border: none;
+      border-right: $border-bottom;
+      padding:5px;
+      font-family: "Microsoft Yahei";
+      font-size: 16px;
+      &::-webkit-input-placeholder {
+        color: #aaa;
+        font-size: 16px;
+      }
+    }
+
+    button{
+      width:20%;
+      height: 34px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: $gray2;
+      border: none;
+      outline:none;
+      font-family: "Microsoft Yahei";
+      font-size:16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      &:hover{
+        color:#fff;
+        background-color: $blue2;
+      }
+      span.null{
+        width:0;
+        position: relative;
+        top:-40px;
+      }
+      span.icon-search{
+        position: absolute;
+        display: inline-block;
+        width:25px;
+        font-size: 25px;
+        right:50%;
+        margin-right: -12px;
+        color: $blue1;
+      }
+    }
+  }
+}
+
+

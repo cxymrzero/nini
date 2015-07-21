@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/base.css"/>
+<link rel="stylesheet" href="/static/css/add.css"/>
+{% endblock %}
+{% block body %}
+<div class="add-window">
+    <header id="school-name">
+        {{ school }}
+    </header>
+    <div class="add-content">
+        <div class="major-panel" id="major-panel">
+            <p class="major" id="major">-- 请点击选择院系 --</p>
+        </div>
+        <input type="text" placeholder="输入老师姓名" class="teacher-name" id="teacher-name"/>
+    </div>
+</div>
+<div class="mask" id="mask">
+    <div class="major-window" id="major-window">
+        <header>请点击选择院系</header>
+        <section>
+            <ul id="list-item">
+                {% for i in depts %}
+                <li dept-id="{{ i.id }}">{{ i.name }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</div>
+
+
+<footer class="add-submit" id="add-submit">
+    <span>确认添加</span>
+</footer>
+<div id="tip">
+    <section>
+        <header>添加成功</header>
+        <footer>确定</footer>
+    </section>
+</div>
+<script src="/static/js/weixinapi.js?v=3.6"></script>
+<script src="/static/js/zepto.min.js"></script>
+<script src="/static/js/add.js"></script>
+{% endblock %}

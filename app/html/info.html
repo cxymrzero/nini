@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0  minimal-ui">
+    <!--视图窗口移动端特有的标签 上面的代码设置依次表示为设置宽度为设备宽度，禁止缩放 网页加载时隐藏地址栏与导航栏（ios7新增）-->
+    <meta http-equiv="cache-control" content="no-cache" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>详情</title>
+    <link rel="stylesheet" href="../static/css/base.css"/>
+    <link rel="stylesheet" href="../static/css/detail.css?1"/>
+
+</head>
+<body>
+<header class="searchBar">
+    <div class="search-wrap">
+        <input type="text" placeholder="搜索老师"/>
+        <button><span class="null">" "</span><span class="icon-search"></span></button>
+    </div>
+</header>
+<div class="teacher-wrap">
+    <div class="teacher">
+        <header>
+            <span class="name">东方不败</span>
+            <span class="score">3.1分</span>
+        </header>
+        <section class="info">
+            <p class="school">华中科技大学</p>
+            <p class="yuan">新闻学院</p>
+        </section>
+    </div>
+    <div class="comment-label" id="comment-label">
+        <span class="hottest active" id="hottest">最火评价</span>
+        <span class="newest" id="newest"> 最新评价</span>
+    </div>
+    <div id="comment-hot-wrap" class="comment-hot-wrap" >
+        <div class="comment-item">
+            <p>这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼,这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼
+            </p>
+            <i class="ding icon-arrow-up"></i>
+            <span class="num">13</span>
+            <i class="cai icon-arrow-down"></i>
+        </div>
+        <div class="comment-item">
+            <p>这个老师真傻逼，这个老师真傻逼，这个老师真傻逼
+            </p>
+            <i class="ding active icon-arrow-up"></i>
+            <span class="num">13</span>
+            <i class="cai icon-arrow-down"></i>
+        </div>
+        <div class="comment-item">
+            <p>这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼，这个老师真傻逼</p>
+            <i class="ding icon-arrow-up"></i>
+            <span class="num">13</span>
+            <i class="cai active icon-arrow-down"></i>
+        </div>
+    </div>
+
+    <div id="comment-new-wrap" class="comment-new-wrap">
+        <div class="comment-item">
+            <p>这个老师真傻逼，这个老师真傻逼，这个老师真傻逼
+            </p>
+            <i class="ding icon-arrow-up"></i>
+            <span class="num">13</span>
+            <i class="cai icon-arrow-down"></i>
+        </div>
+        <div class="comment-item">
+            <p>这个老师真傻逼，这个老师真傻逼，这个老师真傻逼
+            </p>
+            <i class="ding active icon-arrow-up"></i>
+            <span class="num">13</span>
+            <i class="cai icon-arrow-down"></i>
+        </div>
+        <div class="comment-item">
+            <p>这个老师真傻逼，这个老师真傻逼，这个老师真傻逼
+            </p>
+            <i class="ding icon-arrow-up"></i>
+            <span class="num">13</span>
+            <i class="cai active icon-arrow-down"></i>
+        </div>
+    </div>
+
+</div>
+
+<div class="comment-mask" id="comment-mask">
+    <div class="comment-window" id="comment-window">
+        <header>
+            <span>匿名评价</span>
+            <span class="comment-submit" id="comment-submit">提交</span>
+        </header>
+        <textarea name="comment-content" id="comment-content" maxlength="340" onchange="this.value=this.value.substring(0,340)" onkeydown="this.value=this.value.substring(0,340)" onkeyup="this.value=this.value.substring(0,340)" placeholder="限340字以内"></textarea>
+    </div>
+
+    <div id="score-window" class="score-window">
+        <header>为老师打分</header>
+        <p>满分十分</p>
+        <div class="score-panel">
+            <p class="score">--请选择--</p>
+            <ul id="list-item">
+                <li>--0--</li>
+                <li>--1--</li>
+                <li>--2--</li>
+                <li>--3--</li>
+                <li>--4--</li>
+                <li>--5--</li>
+                <li>--6--</li>
+                <li>--7--</li>
+                <li>--8--</li>
+                <li>--9--</li>
+                <li>--10--</li>
+            </ul>
+        </div>
+        <footer>
+            <span id="no-score-submit">我不想打分</span>
+            <span class="score-submit" id="score-submit">提交</span>
+        </footer>
+    </div>
+</div>
+
+<div id="warn">
+
+</div>
+
+<footer class="comment-make" id="comment-make">
+    <span>我要匿名评价</span>
+</footer>
+<script src="../static/js/zepto.min.js"></script>
+<script src="../static/js/info.js"></script>
+</body>
+</html>

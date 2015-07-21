@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}
+评论详情
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="../static/css/base.css"/>
+<link rel="stylesheet" href="../static/css/comment.css"/>
+{% endblock %}
+{% block body %}
+<div class="comment-item" id="comment-item" teacher-id="{{ teacher_id }}">
+    <p>{{ cmt.content }}</p>
+    <i class="ding icon-arrow-up{% if method == 'up' %} active{% endif %}" cmt-id="{{ cmt.id }}"></i>
+    <span class="num">{{ cmt.up }}</span>
+    <i class="cai icon-arrow-down{% if method == 'up' %} active{% endif %}" cmt-id="{{ cmt.id }}"></i>
+</div>
+
+<div class="comment-mask" id="comment-mask">
+    <div class="comment-window" id="comment-window">
+        <header>
+            <span>匿名评价</span>
+            <span class="comment-submit" id="comment-submit">提交</span>
+        </header>
+        <textarea name="comment-content" id="comment-content" maxlength="340" onchange="this.value=this.value.substring(0,340)" onkeydown="this.value=this.value.substring(0,340)" onkeyup="this.value=this.value.substring(0,340)" placeholder="限340字以内"></textarea>
+    </div>
+
+    <div id="score-window" class="score-window">
+        <header>为老师打分</header>
+        <div class="score-panel">
+            <ul id="list-item">
+                <div class="li-item"><li class="score">1</li><li class="score">2</li><li class="score">3</li></div>
+                <div class="li-item"><li class="score">4</li><li class="score">5</li><li class="score">6</li></div>
+                <div class="li-item"><li class="score">7</li><li class="score">8</li><li class="score">9</li></div>
+                <div class="li-item"><li class="score">0</li><li class="none" id="no-score-submit">不打分</li><li class="score">10</li></div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="tip">
+    <section>
+        <header>有点小故障</header>
+        <footer>确定</footer>
+    </section>
+</div>
+
+<footer class="comment-make" id="comment-make">
+    <span>我要匿名评价</span>
+</footer>
+<script src="/static/js/weixinapi.js?v=3.6"></script>
+<script src="/static/js/fastclick.js"></script>
+<script src="/static/js/zepto.min.js"></script>
+<script src="/static/js/comment.js"></script>
+
+
+{% endblock %}

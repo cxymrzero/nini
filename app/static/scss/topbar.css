@@ -1,0 +1,13 @@
+.searchBar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 51px;
+  padding: 0 10px;
+  background-color: #ddd;
+  border-bottom: 1px solid #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+/*# sourceMappingURL=topbar.css.map */

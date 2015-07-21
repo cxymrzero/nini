@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}{{ teacher.name }}{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="../static/css/base.css"/>
+<link rel="stylesheet" href="../static/css/detail.css"/>
+{% endblock %}
+
+{% block body %}
+
+<header class="headBar">
+    <div class="head-wrap">
+        <a href="/" class="img"><img src="../static/images/logo.png" alt=""/></a>
+        <a href="/">首页</a>
+        <a href="/pop">热评榜</a>
+        <a href="/high">高分榜</a>
+        <a href="/low">低分榜</a>
+    </div>
+</header>
+
+<header class="searchBar">
+    <div class="search-wrap">
+        <form action="/teacher/search" method="get" id="search-form">
+            <input type="text" name="search-content" id="search-content" placeholder="搜索老师或院系"/>
+            <button id="search"><span class="null">" "</span><span class="icon-search"></span></button>
+        </form>
+    </div>
+</header>
+
+<div class="teacher-wrap" id="teacher-wrap">
+    <div class="teacher" id="teacher" teacher-id={{ teacher.id }}>
+        <header>
+            <span class="name">{{ teacher.name }}</span>
+            <span class="score">{% if teacher.cmt_num %}{{ teacher.avg|round(1) }}分{% else %}暂无评分{% endif %}</span>
+        </header>
+        <section class="info">
+            <p class="school">{{ teacher.school }}</p>
+            <p class="yuan">{{ teacher.dept_name }}</p>
+        </section>
+    </div>
+    <div class="comment-label" id="comment-label">
+        <span class="hottest active" id="hottest">最火评价</span>
+        <span class="newest" id="newest"> 最新评价</span>
+    </div>
+    <div id="comment-hot-wrap" class="comment-hot-wrap" >
+        {% if pop_cmts %}
+        {% for i in range(pop_cmts|length) %}
+        <div class="comment-item">
+            <a href="/comment/{{ pop_cmts[i].id }}">
+                <p>{{ pop_cmts[i].content }}</p>
+            </a>
+            <i class="{{ new_cmts[i].id }} ding icon-arrow-up{% if pop_cmts_methods[i] == 'up' %} active{% endif %}" cmt-id="{{ pop_cmts[i].id }}"></i>
+            <span class="num">{{ pop_cmts[i].up }}</span>
+            <i class="{{ new_cmts[i].id }} cai icon-arrow-down{% if pop_cmts_methods[i] == 'down' %} active{% endif %}" cmt-id="{{ pop_cmts[i].id }}"></i>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    <div id="comment-new-wrap" class="comment-new-wrap">
+        {% if new_cmts %}
+        {% for i in range(new_cmts|length) %}
+        <div class="comment-item">
+            <a href="/comment/{{ new_cmts[i].id }}">
+                <p>{{ new_cmts[i].content }}</p>
+            </a>
+            <i class="{{ new_cmts[i].id }} ding icon-arrow-up{% if new_cmts_methods[i] == 'up' %} active{% endif %}" cmt-id="{{ new_cmts[i].id }}"></i>
+            <span class="num">{{ new_cmts[i].up }}</span>
+            <i class="{{ new_cmts[i].id }} cai icon-arrow-down{% if new_cmts_methods[i] == 'down' %} active{% endif %}" cmt-id="{{ new_cmts[i].id }}"></i>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<div class="comment-mask" id="comment-mask">
+    <div class="comment-window" id="comment-window">
+        <header>
+            <span>匿名评价</span>
+            <span class="comment-submit" id="comment-submit">提交</span>
+        </header>
+        <textarea name="comment-content" id="comment-content" maxlength="340" onchange="this.value=this.value.substring(0,340)" onkeydown="this.value=this.value.substring(0,340)" onkeyup="this.value=this.value.substring(0,340)" placeholder="限340字以内"></textarea>
+    </div>
+
+    <div id="score-window" class="score-window">
+        <header>为老师打分</header>
+        <div class="score-panel">
+            <ul id="list-item">
+                <div class="li-item"><li class="score">1</li><li class="score">2</li><li class="score">3</li></div>
+                <div class="li-item"><li class="score">4</li><li class="score">5</li><li class="score">6</li></div>
+                <div class="li-item"><li class="score">7</li><li class="score">8</li><li class="score">9</li></div>
+                <div class="li-item"><li class="score">0</li><li class="none" id="no-score-submit">不打分</li><li class="score">10</li></div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="tip">
+    <section>
+        <header>有点小故障</header>
+        <footer>确定</footer>
+    </section>
+</div>
+
+<footer class="comment-make" id="comment-make">
+    <span>我要匿名评价</span>
+</footer>
+<script src="/static/js/weixinapi.js?v=3.6"></script>
+<script src="/static/js/fastclick.js"></script>
+<script src="/static/js/zepto.min.js"></script>
+<script src="/static/js/index.js"></script>
+<script src="/static/js/info.js"></script>
+{% endblock %}

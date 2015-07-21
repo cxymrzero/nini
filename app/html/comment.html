@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0  minimal-ui">
+    <!--视图窗口移动端特有的标签 上面的代码设置依次表示为设置宽度为设备宽度，禁止缩放 网页加载时隐藏地址栏与导航栏（ios7新增）-->
+    <meta http-equiv="cache-control" content="no-cache" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>详情</title>
+    <link rel="stylesheet" href="../static/css/base.css"/>
+    <link rel="stylesheet" href="../static/css/comment.css"/>
+</head>
+<body>
+<div class="comment-item">
+    <p>姜文导演的电影《一步之遥》之所以被很多影迷期待，是因为他先前导演的作品《让子弹飞》引起极大观影热潮。在《让子弹飞》最后，演员台词中说，浦东就是上海，上海就是浦东，又加上电影《一步之遥》的故事背景正好是北洋年间的上海，难免让影迷认为，姜文导演的《一步之遥》是在给《让子弹飞》做续集
+        从内容而言，电影《让子弹飞》第一次把这样的命题搬上中国屏幕：交战双方通过舆论造势的方式动员人民从而打垮对方。“舆论声势”四个字，是《让子弹飞》破题的关键。作为事实意义上的续集，《一步之遥》实乃也是在“舆论声势”四个字上大做文章。与《让》不同的是，《一步之遥》并非制造舆论声势动员人民从而打垮对方，而是人民半自动的产生某种舆论，对抗双方中的一方如何满足舆论制造更多的顺应舆论的假象置对手于死地。
+        两部电影的传承关系，自然在于此处。不过，与电影《让子弹飞》相比，《一步之遥》又有巨大不足，主要体现在以下几个方面。</p>
+    <i class="ding icon-arrow-up"></i>
+    <span class="num">13</span>
+    <i class="cai icon-arrow-down"></i>
+</div>
+
+<div class="comment-mask" id="comment-mask">
+    <div class="comment-window" id="comment-window">
+        <header>
+            <span>匿名评价</span>
+            <span class="comment-submit" id="comment-submit">提交</span>
+        </header>
+        <textarea name="comment-content" id="comment-content" maxlength="340" onchange="this.value=this.value.substring(0,340)" onkeydown="this.value=this.value.substring(0,340)" onkeyup="this.value=this.value.substring(0,340)" placeholder="限340字以内"></textarea>
+    </div>
+
+    <div id="score-window" class="score-window">
+        <header>为老师打分</header>
+        <p>满分十分</p>
+        <div class="score-panel">
+            <p class="score">--请选择--</p>
+            <ul id="list-item">
+                <li>--0--</li>
+                <li>--1--</li>
+                <li>--2--</li>
+                <li>--3--</li>
+                <li>--4--</li>
+                <li>--5--</li>
+                <li>--6--</li>
+                <li>--7--</li>
+                <li>--8--</li>
+                <li>--9--</li>
+                <li>--10--</li>
+            </ul>
+        </div>
+        <footer>
+            <span id="no-score-submit">我不想打分</span>
+            <span class="score-submit" id="score-submit">提交</span>
+        </footer>
+    </div>
+</div>
+
+<footer class="comment-make" id="comment-make">
+    <span>我要匿名评价</span>
+</footer>
+<script src="../static/js/zepto.min.js"></script>
+<script src="../static/js/comment.js"></script>
+</body>
+</html>

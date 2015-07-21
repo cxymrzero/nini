@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+    <div id="login">
+        <div class="bubble">
+            <div class="rectangle">
+                <h2>管理员登陆</h2>
+            </div>
+            <form class="info" action="/admin/login" method="POST">
+                <div class="username">
+                    <input id="username" type="text" name="name" placeholder="用户名">
+                </div>
+                <div class="password">
+                    <input id="password" type="password" name="pwd" placeholder="密码">
+                </div>
+                <input type="submit" class="submit" value="登陆"/>
+                <!--<span class='error'>用户名或密码有误</span>-->
+                <span class="error">
+                    {% with msgs = get_flashed_messages() %}
+                        {% if msgs %}
+                            {% for msg in msgs %}
+                                {{ msg }}
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </span>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../static/js/zepto.min.js"></script>
+<script src="../static/js/signin.js"></script>
+</html>
