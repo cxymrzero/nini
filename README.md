@@ -1,4 +1,4 @@
-# 匿名评教网站——匿匿 后台
+# 匿名评教网站——匿匿
 
 ### 使用flask + Flask-SQLAlchemy + MySQL编写
 
